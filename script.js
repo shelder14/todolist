@@ -5,11 +5,12 @@ $(document).ready(function() {
         success: function(response) {
         	console.log(response);
             $('.table').append(
-                `<tbody>${response.results.map(n =>
-			    `<tr>
+                `<tbody>${response.results.map(function(n){
+			    return `<tr>
 			      <td>${n.id}</td>
 			      <td>${n.name}</td>
-			    </tr>`).join(',')}
+			    </tr>`;
+			}3).join(',')}
 			  </tbody>`
 			);
 			
@@ -17,3 +18,4 @@ $(document).ready(function() {
 
     });
 });
+//sadasdasdasda
